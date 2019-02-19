@@ -1,0 +1,16 @@
+package com.rule
+
+import br.gov.sepog.model.Caba
+
+rule "Ta nervoso"
+	when 
+		productObject: Caba(nome=="PA")
+	then
+		productObject.setSituacao("nervoso");
+	end
+rule "Coisa o coisa"
+	when 
+		productObject: Caba(nome=="manel")
+	then
+		productObject.setSituacao("coisado");
+	end
