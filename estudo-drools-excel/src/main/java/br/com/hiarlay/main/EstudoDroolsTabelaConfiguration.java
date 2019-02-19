@@ -1,4 +1,4 @@
-package br.gov.sepog.main;
+package br.com.hiarlay.main;
 
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieBuilder;

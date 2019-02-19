@@ -1,12 +1,12 @@
-package br.gov.sepog.controller;
+package br.com.hiarlay.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.gov.sepog.service.TabelaService;
+import br.com.hiarlay.service.TabelaService;
 
-@RestController("caba")
+@RestController
 public class TabelaController {
 	
 	@Autowired

@@ -1,11 +1,11 @@
-package br.gov.sepog.service;
+package br.com.hiarlay.service;
 
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.baeldung.drools.model.Customer;
-import com.baeldung.drools.model.Customer.CustomerType;
+import br.com.hiarlay.model.Customer;
+import br.com.hiarlay.model.Customer.CustomerType;
 
 @Service
 public class TabelaService {

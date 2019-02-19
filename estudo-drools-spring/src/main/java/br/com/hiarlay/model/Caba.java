@@ -1,4 +1,4 @@
-package br.gov.sepog.model;
+package br.com.hiarlay.model;
 
 import lombok.Getter;
 import lombok.Setter;

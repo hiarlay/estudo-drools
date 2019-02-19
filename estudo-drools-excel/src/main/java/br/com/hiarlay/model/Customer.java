@@ -1,4 +1,4 @@
-package com.baeldung.drools.model;
+package br.com.hiarlay.model;
 
 import lombok.Getter;
 import lombok.Setter;

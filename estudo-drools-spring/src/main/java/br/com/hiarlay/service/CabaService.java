@@ -1,4 +1,4 @@
-package br.gov.sepog.service;
+package br.com.hiarlay.service;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.gov.sepog.model.Caba;
+import br.com.hiarlay.model.Caba;
 
 @Service
 public class CabaService {

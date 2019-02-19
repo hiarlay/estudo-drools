@@ -1,4 +1,4 @@
-package br.gov.sepog.main;
+package br.com.hiarlay.main;
 
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieBuilder;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("br.gov.sepog.service")
+@ComponentScan("br.com.hiarlay.service")
 public class EstudoDroolsSpringConfiguration {
 	
 	private static final String drlFile = "RULES_CABAS.drl";

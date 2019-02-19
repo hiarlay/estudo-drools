@@ -1,6 +1,6 @@
 package com.rule
 
-import br.gov.sepog.model.Caba
+import br.com.hiarlay.model.Caba
 
 rule "Ta nervoso"
 	when 

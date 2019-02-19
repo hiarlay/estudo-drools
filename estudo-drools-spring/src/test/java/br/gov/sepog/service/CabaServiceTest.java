@@ -8,7 +8,8 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.gov.sepog.model.Caba;
+import br.com.hiarlay.model.Caba;
+import br.com.hiarlay.service.CabaService;
 
 public class CabaServiceTest   {
 	
