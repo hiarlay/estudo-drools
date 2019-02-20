@@ -1,5 +1,7 @@
-Estudo do drools
+Projetos de estudos sobre o Drools
 
-Projeto rodando com arquivo de regras
+Possui dois projetos com springboot:
 
-Projeto rodando com leitura de tabela
+estudo-drools-spring: Projeto com arquivo drl, executando por um endpoint /verificar e com implementação de teste unitário das duas regras contidas em um arquivo de regra.
+
+estudo-drools-excel: Projeto que utiliza uma tabela de decisão do excel, pode ser executado por um endpoint /verificar e com implementação de teste unitário da regra contiga na tabela.
