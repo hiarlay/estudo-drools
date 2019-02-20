@@ -1,11 +1,12 @@
 package br.com.hiarlay.service;
 
+import java.math.BigDecimal;
+
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.hiarlay.model.Customer;
-import br.com.hiarlay.model.Customer.CustomerType;
+import br.com.hiarlay.model.SimulacaoAposentadoria;
 
 @Service
 public class TabelaService {
@@ -14,13 +15,19 @@ public class TabelaService {
     private KieSession kieSession;
  
     public void verificarTabela() {
-    	Customer customer = new Customer();
-    	customer.setType(CustomerType.INDIVIDUAL);
-    	customer.setYears(3);
-    	kieSession.insert(customer);
+    	SimulacaoAposentadoria simulacao = new SimulacaoAposentadoria();
+    	simulacao.setCodigoTipoAposentadoria(536);
+    	simulacao.setTempoContribuicao(11000.0);
+    	simulacao.setSexo("M");
+    	simulacao.setCargo("PROFESSOR");
+    	simulacao.setValorSalario(3400.00);
+    	simulacao.setValorSalariosMedia(2400.00);
+    	kieSession.insert(simulacao);
     	 
     	kieSession.fireAllRules();
-    	System.out.println(customer.getDiscount());
+    	System.out.println(simulacao.getTempoContribuicaoNecessaria());
+    	System.out.println(simulacao.getCalculoProporcao());
+    	System.out.println(simulacao.getValorBeneficioCalculado());
     }
     
 

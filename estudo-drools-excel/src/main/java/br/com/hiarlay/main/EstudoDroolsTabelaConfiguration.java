@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("br.gov.sepog.service")
 public class EstudoDroolsTabelaConfiguration {
 	
-	private static final String xlsFile = "Discount.xls";
+	private static final String xlsFile = "Aposentadoria.xls";
 	 
     @Bean
     public KieSession kieContainer() {
