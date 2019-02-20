@@ -1,0 +1,10 @@
+package com.rule
+
+import br.com.hiarlay.model.Caba
+
+rule "Dependente"
+	when
+		productObject: Caba(idade<=18)
+	then
+		productObject.setDependente(true);
+	end 

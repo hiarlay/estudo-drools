@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class EstudoDroolsSpringConfiguration {
 	
 	private static final String drlFile = "RULES_CABAS.drl";
+	private static final String drlDependenteFile = "RULES_DEPENDENTE.drl";
 	 
     @Bean
     public KieContainer kieContainer() {
@@ -22,6 +23,7 @@ public class EstudoDroolsSpringConfiguration {
  
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
         kieFileSystem.write(ResourceFactory.newClassPathResource(drlFile));
+        kieFileSystem.write(ResourceFactory.newClassPathResource(drlDependenteFile));
         KieBuilder kieBuilder = kieServices.newKieBuilder(kieFileSystem);
         kieBuilder.buildAll();
         KieModule kieModule = kieBuilder.getKieModule();

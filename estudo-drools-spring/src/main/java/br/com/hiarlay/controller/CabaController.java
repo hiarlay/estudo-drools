@@ -1,6 +1,7 @@
 package br.com.hiarlay.controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,14 @@ public class CabaController {
 	private CabaService cabaService;
 	
 	@GetMapping("verificar")
+	@SuppressWarnings("deprecation")
 	public void verificarOsCabaOk() {
 		Caba cab1 = new Caba();
 		Caba cab2 = new Caba();
 		cab1.setNome("PA");
+		cab1.setDataNascimento(new Date("14/09/1994"));
 		cab2.setNome("manel");
+		cab2.setDataNascimento(new Date("14/09/2009"));
 	    List<Caba> cabas = new ArrayList<Caba>();
 	    cabas.add(cab1);
 	    cabas.add(cab2);
@@ -29,6 +33,7 @@ public class CabaController {
 	    for(Caba caba : cabas) {
 			System.out.println("O " + caba.getNome()
 			+ " ta " + caba.getSituacao());
+			System.out.println("É dependente ? " +caba.isDependente());
 			
 		}
 	}
