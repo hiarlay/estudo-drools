@@ -1,10 +1,12 @@
 package com.rule
 
-import br.com.hiarlay.model.Caba
+import br.com.hiarlay.model.Pessoa
+
+dialect "mvel" 
 
 rule "Dependente"
 	when
-		productObject: Caba(idade<=18)
+		productObject: Pessoa(idade<=18)
 	then
 		productObject.setDependente(true);
 	end 

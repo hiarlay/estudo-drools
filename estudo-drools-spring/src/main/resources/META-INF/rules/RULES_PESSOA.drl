@@ -1,0 +1,16 @@
+package com.rule
+
+import br.com.hiarlay.model.Pessoa
+
+rule "Ta nervoso"
+	when 
+		productObject: Pessoa(nome=="Paulo André")
+	then
+		productObject.setSituacao("Ta nervoso");
+	end
+rule "Coisa o coisa"
+	when 
+		productObject: Pessoa(nome=="Emanuel")
+	then
+		productObject.setSituacao("Ta coisado");
+	end

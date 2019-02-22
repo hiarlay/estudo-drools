@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Setter
-public class Caba {
+public class Pessoa {
 	
 	@Getter 
 	private String nome;

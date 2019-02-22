@@ -1,0 +1,33 @@
+package com.rule
+
+import br.com.hiarlay.model.Rescisao
+import br.com.hiarlay.model.Pessoa
+
+dialect "mvel" 
+
+rule "Decimo"
+	when 
+		productObject: Pessoa(nome=="PA")
+	then
+		productObject.setSituacao("nervoso");
+	end
+rule "Ferias"
+	when 
+		productObject: Rescisao(feriasVencida)
+	then
+		productObject.setSituacao("coisado");
+	end
+	
+rule "INSS"
+	when 
+		productObject: Pessoa(nome=="manel")
+	then
+		productObject.setSituacao("coisado");
+	end	
+
+rule "IRRF"
+	when 
+		productObject: Pessoa(nome=="manel")
+	then
+		productObject.setSituacao("coisado");
+	end		

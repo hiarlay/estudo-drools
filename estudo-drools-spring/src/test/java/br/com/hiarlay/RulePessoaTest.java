@@ -10,31 +10,31 @@ import com.github.jeichler.junit.drools.annotation.DroolsFiles;
 import com.github.jeichler.junit.drools.annotation.StatefulDroolsSession;
 import com.github.jeichler.junit.drools.session.DroolsSession;
 
-import br.com.hiarlay.model.Caba;
+import br.com.hiarlay.model.Pessoa;
 
-@DroolsFiles(ruleFiles = { "RULES_CABAS.drl" })
+@DroolsFiles(ruleFiles = { "META-INF/rules/RULES_PESSOA.drl" })
 @RunWith(DroolsJUnitRunner.class)
-public class RuleTaNervosoTest {
+public class RulePessoaTest {
 
 	@StatefulDroolsSession
 	private DroolsSession session;
 
 	@Test
 	public void deveRetornarNervosoParaPA() {
-		Caba caba = new Caba();
-		caba.setNome("PA");
+		Pessoa caba = new Pessoa();
+		caba.setNome("Paulo André");
 		session.insert(caba);
 		session.fireAllRules();
-		assertEquals("nervoso",caba.getSituacao());
+		assertEquals("Ta nervoso",caba.getSituacao());
 	}
 	
 	@Test
 	public void deveRetornarCoisadoParaManel() {
-		Caba caba = new Caba();
-		caba.setNome("manel");
+		Pessoa caba = new Pessoa();
+		caba.setNome("Emanuel");
 		session.insert(caba);
 		session.fireAllRules();
-		assertEquals("coisado",caba.getSituacao());
+		assertEquals("Ta coisado",caba.getSituacao());
 	}
 
 

@@ -12,21 +12,21 @@ import com.github.jeichler.junit.drools.annotation.DroolsFiles;
 import com.github.jeichler.junit.drools.annotation.StatefulDroolsSession;
 import com.github.jeichler.junit.drools.session.DroolsSession;
 
-import br.com.hiarlay.model.Caba;
+import br.com.hiarlay.model.Pessoa;
 
-@DroolsFiles(ruleFiles = { "RULES_DEPENDENTE.drl" })
+@DroolsFiles(ruleFiles = { "META-INF/rules/RULES_DEPENDENTE.drl" })
 @RunWith(DroolsJUnitRunner.class)
 public class RuleDependenteTest {
 
 	@StatefulDroolsSession
 	private DroolsSession<?> session;
 	
-	private Caba caba;
+	private Pessoa caba;
 	
 	@Test
 	@SuppressWarnings("deprecation")
 	public void deveCriarUmCaba(){
-		caba = new Caba();
+		caba = new Pessoa();
 		caba.setDataNascimento(new Date("14/09/2009"));
 	}
 	
@@ -41,7 +41,7 @@ public class RuleDependenteTest {
 	@Test
 	@SuppressWarnings("deprecation")
 	public void deveRetornarIsDependenteFalse(){
-		caba = new Caba();
+		caba = new Pessoa();
 		caba.setDataNascimento(new Date("14/09/1994"));
 		session.insert(caba);
 		session.fireAllRules();
